@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ผู้สอบผ่านภาค ก</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ฟอนต์ Sarabun -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div class="desktop-bg">
+    <div class="window">
+
+        <div class="window-body">
+            <h1>ผู้สอบผ่านภาคความรู้ความสามารถทั่วไป (ภาค ก)</h1>
+            <p class="subtitle">
+                ระบบค้นหารายชื่อผู้สอบผ่านภาคความรู้ความสามารถทั่วไป (ภาค ก) แยกตามภาค/เขต
+            </p>
+
+            <div class="announce-box">
+                <div class="announce-label">ประกาศคณะกรรมการกลางการสอบแข่งขันพนักงานส่วนท้องถิ่น</div>
+                <p>
+                    เรื่อง
+                    <span class="highlight">
+                        รายชื่อผู้สอบผ่านภาคความรู้ความสามารถทั่วไป (ภาค ก) ประจำปี ๒๕๖๘
+                    </span>
+                </p>
+
+                <!-- ปุ่มประกาศทางการ (ไม่ popup) -->
+                <a class="btn-primary external-link"
+                   href="https://dla-local2568.thaijobjob.com/"
+                   target="_blank">
+                    คลิกที่นี่เพื่ออ่านประกาศฉบับเต็มบนเว็บไซต์ทางการ
+                </a>
+            </div>
+
+            <div class="region-grid">
+
+                <!-- ภาคเหนือ -->
+                <section class="region-card">
+                    <h2>ภาคเหนือ</h2>
+                    <ul>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/a0a7adf9-2339-4d83-9968-af60957cd21f" target="_blank">ค้นหา ภาคเหนือ เขต 1</a></li>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/fab0a95c-762e-4486-87f0-d74e16fa8f0b" target="_blank">ค้นหา ภาคเหนือ เขต 2</a></li>
+                    </ul>
+                </section>
+
+                <!-- ภาคกลาง -->
+                <section class="region-card">
+                    <h2>ภาคกลาง</h2>
+                    <ul>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/99a70d7a-88d2-496d-a720-8256a54f719b" target="_blank">ค้นหา ภาคกลาง เขต 1</a></li>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/c39ee904-8b37-4d88-8aa5-41f192654844" target="_blank">ค้นหา ภาคกลาง เขต 2</a></li>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/a2da2342-9b99-459c-ac59-69d014d86079" target="_blank">ค้นหา ภาคกลาง เขต 3</a></li>
+                    </ul>
+                </section>
+
+                <!-- ภาคอีสาน -->
+                <section class="region-card">
+                    <h2>ภาคตะวันออกเฉียงเหนือ</h2>
+                    <ul>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/a345b111-d221-4b9a-989a-24473ec19a6e" target="_blank">ค้นหา ภาคตะวันออกเฉียงเหนือ เขต 1</a></li>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/436fa92b-9ea3-42d4-9fa5-2dc7d2d21bc7" target="_blank">ค้นหา ภาคตะวันออกเฉียงเหนือ เขต 2</a></li>
+                        <li><a class="search-link" href="https://notebooklm.google.com/notebook/ff448f61-2f49-4159-8a26-41277cb24796" target="_blank">ค้นหา ภาคตะวันออกเฉียงเหนือ เขต 3</a></li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <div class="back">
+                <a href="../index.html">← กลับหน้าหลัก</a>
+            </div>
+
+            <p class="disclaimer">
+                *ระบบนี้เป็นเพียงการค้นหาเบื้องต้นเท่านั้น <br>
+                โปรดตรวจสอบรายละเอียดจากเว็บไซต์ทางการ
+                <a href="https://dla-local2568.thaijobjob.com/" target="_blank">
+                    https://dla-local2568.thaijobjob.com/
+                </a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    © ๒๕๖๘ ระบบค้นหาผู้สอบผ่านภาค ก (ไม่ใช่เว็บไซต์ทางการ)
+</footer>
+
+
+<!-- Popup Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* -------------------------------
+       POPUP สำหรับปุ่ม “ค้นหา”
+       ------------------------------- */
+    const searchLinks = document.querySelectorAll('.search-link');
+
+    searchLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const url = this.href;
+
+            Swal.fire({
+                title: 'คำเตือนการใช้งาน',
+                icon: 'info',
+                html: `
+                    ข้อมูลที่ท่านกำลังจะเปิดเป็นเพียง
+                    <b>การค้นหาเบื้องต้นจากระบบช่วยค้นหาเท่านั้น</b><br><br>
+                    กรุณาตรวจสอบความถูกต้องเพิ่มเติมได้ที่เว็บไซต์ทางการ<br>
+                    <a href="https://dla-local2568.thaijobjob.com/" target="_blank">
+                        https://dla-local2568.thaijobjob.com/
+                    </a>
+                `,
+                showCancelButton: true,
+                confirmButtonText: 'ยอมรับและเปิดหน้าค้นหา',
+                cancelButtonText: 'ยกเลิก',
+                reverseButtons: true,
+                confirmButtonColor: '#0b63d1'
+            }).then((result) => {
+                if (result.isConfirmed && url && url !== '#') {
+                    window.open(url, '_blank');
+                }
+            });
+        });
+    });
+
+    /* -------------------------------
+       ปุ่มประกาศทางการ → เปิดทันที ไม่มี popup
+       ------------------------------- */
+    const externalButton = document.querySelector('.btn-primary.external-link');
+
+    if (externalButton) {
+        externalButton.addEventListener('click', function (e) {
+            // เปิดลิงก์ตรง ไม่ popup
+            const url = this.href;
+            window.open(url, "_blank");
+        });
+    }
+
+});
+</script>
+
+</body>
+</html>

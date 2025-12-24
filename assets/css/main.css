@@ -1,0 +1,91 @@
+/* ฟอนต์ทั้งหมดใช้ Sarabun */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* กล่องกลาง */
+.container {
+    max-width: 800px;
+    background: #ffffff;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* หัวเรื่อง */
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* กล่องการ์ด */
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* การ์ดเดี่ยว */
+.card {
+    display: block;
+    background: #f9f9f9;
+    padding: 18px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #222;
+    border: 1px solid #e4e4e4;
+    transition: 0.2s ease-in-out;
+}
+
+/* หัวข้อในการ์ด */
+.card h2 {
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+}
+
+/* ข้อความย่อยในการ์ด */
+.card p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Hover */
+.card:hover {
+    background: #eef6ff;
+    border-color: #bcd7ff;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px 12px;
+        padding: 20px 18px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background: radial-gradient(circle at top, #e3f0ff 0, #dde5f3 35%, #cfd4e4 100%);
+    margin: 0;
+    color: #1f2933;
+}
+
+/* พื้นหลังเหมือน Desktop macOS */
+.desktop-bg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 12px 80px;
+}
+
+/* หน้าต่างหลัก */
+.window {
+    width: 100%;
+    max-width: 980px;
+    border-radius: 20px;
+    background: rgba(248, 250, 252, 0.95);
+    backdrop-filter: blur(16px);
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.25),
+        0 0 0 1px rgba(148, 163, 184, 0.3);
+    overflow: hidden;
+}
+
+.window-body {
+    padding: 22px 22px 28px;
+}
+
+h1 {
+    margin: 0 0 6px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #111827;
+}
+
+.subtitle {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* กล่องประกาศ */
+.announce-box {
+    border-radius: 16px;
+    padding: 14px 18px 16px;
+    background: linear-gradient(135deg, #e3f0ff, #f5f8ff);
+    border: 1px solid rgba(129, 140, 248, 0.4);
+    margin-bottom: 22px;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.2);
+}
+
+.announce-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1d4ed8;
+    margin-bottom: 6px;
+}
+
+.announce-box p {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    color: #111827;
+}
+
+.highlight {
+    font-weight: 600;
+}
+
+/* ปุ่มทางการ */
+.btn-primary {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #1d4ed8;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.4);
+    transition: 0.15s;
+}
+
+.btn-primary:hover {
+    background: #1e40af;
+    transform: translateY(-1px);
+}
+
+/* การ์ดพื้นที่ */
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.region-card {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 14px 14px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 3px 9px rgba(15, 23, 42, 0.08);
+}
+
+.region-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+    border-left: 4px solid #3b82f6;
+    padding-left: 8px;
+    color: #111827;
+}
+
+.region-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.region-card li {
+    margin: 6px 0;
+}
+
+.region-card a {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #1d4ed8;
+    text-decoration: none;
+    padding: 4px 0 4px 18px;
+    position: relative;
+}
+
+.region-card a::before {
+    content: "↗";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+}
+
+.region-card a:hover {
+    background: rgba(219, 234, 254, 0.8);
+    border-radius: 6px;
+}
+
+/* ปุ่มกลับ */
+.back {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.back a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
+
+/* ข้อความชี้แจง */
+.disclaimer {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.disclaimer a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+/* ฟุตเตอร์ */
+.footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+    padding-bottom: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .region-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .desktop-bg {
+        align-items: stretch;
+        padding: 16px 8px 72px;
+    }
+
+    .window-body {
+        padding: 16px 14px 22px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    .region-grid {
+        grid-template-columns: 1fr;
+    }
+}
